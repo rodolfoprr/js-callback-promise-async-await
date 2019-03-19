@@ -1,4 +1,4 @@
 ```
-npm install -g json-server
+npm install
 npm test
 ```
