@@ -1,9 +1,3 @@
-const request = require('./request');
+const getPersonNameAndBalance = require('./get-person-name-and-balance');
 
-request((error, response) => {
-  if (error) {
-    return console.log('Ooops!', error);
-  }
-
-  console.log('All good', response);
-});
+getPersonNameAndBalance((_, response) => console.log(response));

@@ -1,7 +1,7 @@
 const http = require('http');
 
-module.exports = callback =>
-  http.get('http://localhost:3000/accounts', response => {
+module.exports = () => new Promise((resolve, reject) => {
+  http.get('http://localhost:3000/account-balance', response => {
     let data = '';
 
     // A chunk of data has been recieved.
@@ -14,9 +14,10 @@ module.exports = callback =>
       const finalData = JSON.parse(data);
 
       if (response.statusCode === 500) {
-        return callback(finalData);
+        return reject(finalData);
       }
 
-      callback('', finalData);
+      resolve(finalData);
     });
   });
+});

@@ -1,9 +1,10 @@
 {
-  "accounts": [
-    {
-      "ïd": 1
-    }, {
-      "id": 2
-    }
-  ]
+  "account-balance": {
+    "balance": "$10.00"
+  },
+  "person": {
+    "firstName": "John",
+    "middleName": "J.",
+    "lastName": "Travolta"
+  }
 }

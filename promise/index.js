@@ -1,9 +1,5 @@
-const request = require('./request');
+const getPersonNameAndBalance = require('./get-person-name-and-balance');
 
-request()
-    .then(response => {
-        console.log('All good', response);
-    })
-    .catch(error => {
-        console.log('Ooops!', error);
-    });
+getPersonNameAndBalance()
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
